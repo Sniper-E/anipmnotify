@@ -1,0 +1,5 @@
+services:
+    sniper.anipmnotify.listener:
+        class: sniper\anipmnotify\event\listener
+        tags:
+            - { name: event.listener }

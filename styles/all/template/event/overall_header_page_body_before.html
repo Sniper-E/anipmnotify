@@ -1,0 +1,17 @@
+<!-- IF S_DISPLAY_PM and (S_USER_NEW_PRIVMSG or S_USER_UNREAD_PRIVMSG) -->
+	<div class="pm-notify">
+		<div class="inner">
+			<span class="pm-read"><a href="{U_PRIVATEMSGS}"><!-- IF S_USER_UNREAD_PRIVMSG > 1 -->{L_PM_READ_S}<!-- ELSE -->{L_PM_READ}<!-- ENDIF --></a></span>
+			<span class="pm-clapping">{CURRENT_USERNAME_SIMPLE}</span>
+			<span class="pm-message"><span class="pm-have">{L_PM_YOU_HAVE} </span>
+			<!-- IF S_USER_UNREAD_PRIVMSG > S_USER_NEW_PRIVMSG and S_USER_NEW_PRIVMSG != 0 -->
+				[<span class="pm-new">{S_USER_NEW_PRIVMSG}</span>] <!-- IF S_USER_NEW_PRIVMSG > 1 -->{L_PM_NEW_S}<!-- ELSE -->{L_PM_NEW}<!-- ENDIF --> <span class="pm-mail"></span>&nbsp;[<span class="pm-unread">{S_USER_UNREAD_PRIVMSG}</span>] <!-- IF S_USER_UNREAD_PRIVMSG > 1 -->{L_PM_UNREAD_S}<!-- ELSE -->{L_PM_UNREAD}<!-- ENDIF -->
+			<!-- ELSE -->
+				<span class="pm-mail"></span>
+				<!-- IF S_USER_NEW_PRIVMSG -->&nbsp;[<span class="pm-new">{S_USER_NEW_PRIVMSG}</span>] <!-- IF S_USER_NEW_PRIVMSG > 1 -->{L_PM_NEW_S}<!-- ELSE -->{L_PM_NEW}<!-- ENDIF -->
+				<!-- ELSE -->&nbsp;[<span class="pm-unread">{S_USER_UNREAD_PRIVMSG}</span>] <!-- IF S_USER_UNREAD_PRIVMSG > 1 -->{L_PM_UNREAD_S}<!-- ELSE -->{L_PM_UNREAD}<!-- ENDIF -->
+				<!-- ENDIF --></span>
+			<!-- ENDIF -->
+		</div>
+	</div>
+<!-- ENDIF -->

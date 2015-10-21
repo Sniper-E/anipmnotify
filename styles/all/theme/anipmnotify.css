@@ -1,0 +1,65 @@
+/* ----------------------------------------------------------
+Background images for Animated PM Notification
+------------------------------------------------------------- */
+
+.pm-notify {
+	font-size: 1.1em;
+	text-align: center;
+	font-weight: bold;
+	background-color: #ECEDEE;
+	color: #BC2A4D;
+   border: 1px solid #AAAAAA;
+   -webkit-border-radius: 6px;
+   -o-border-radius: 6px;
+   -moz-border-radius: 6px;
+   border-radius: 6px;
+   padding: 6px;
+   margin: 4px 0;
+}
+
+.pm-message {
+	color: #105297;
+	vertical-align: middle;
+	white-space: nowrap;
+	padding-top: 8px;
+}
+
+.pm-clapping {
+	font-size: 1.3em;
+	float: left;
+	background: url("images/pm_clapping.gif");
+	background-repeat: no-repeat;
+	background-position: left;
+	height: 24px;
+	padding-left: 40px;
+	padding-top: 4px;
+	margin-bottom: -6px;
+}
+
+.pm-mail {
+	background: url("images/pm_mail.gif");
+	background-repeat: no-repeat;
+	padding: 20px 24px;
+}
+
+.pm-read {
+	float: right;
+	background: url("images/pm_read.gif");
+	background-repeat: no-repeat;
+	background-position: right;
+	padding: 10px 35px 10px 0;
+	margin: -4px 0;
+}
+
+.pm-new {
+	color: #AA0000;
+}
+
+.pm-unread {
+	color: #00AA00;
+}
+
+@media only screen and (max-width: 380px), only screen and (max-device-width: 380px) {
+	.pm-have {
+		display: none;
+	}
