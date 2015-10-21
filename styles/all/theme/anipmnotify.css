@@ -59,7 +59,7 @@ Background images for Animated PM Notification
 	color: #00AA00;
 }
 
-@media only screen and (max-width: 380px), only screen and (max-device-width: 380px) {
+@media only screen and (max-width: 320px), only screen and (max-device-width: 320px) {
 	.pm-have {
 		display: none;
 	}
