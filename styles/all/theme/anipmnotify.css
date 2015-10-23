@@ -8,13 +8,13 @@ Background images for Animated PM Notification
 	font-weight: bold;
 	background-color: #ECEDEE;
 	color: #BC2A4D;
-   border: 1px solid #AAAAAA;
-   -webkit-border-radius: 6px;
-   -o-border-radius: 6px;
-   -moz-border-radius: 6px;
-   border-radius: 6px;
-   padding: 6px;
-   margin: 4px 0;
+	border: 1px solid #AAAAAA;
+	-webkit-border-radius: 6px;
+	-o-border-radius: 6px;
+	-moz-border-radius: 6px;
+	border-radius: 6px;
+	padding: 6px;
+	margin: 4px 0;
 }
 
 .pm-message {
@@ -31,8 +31,8 @@ Background images for Animated PM Notification
 	background-repeat: no-repeat;
 	background-position: left;
 	height: 24px;
+	padding: 4px 0;
 	padding-left: 40px;
-	padding-top: 4px;
 	margin-bottom: -6px;
 }
 
@@ -47,7 +47,8 @@ Background images for Animated PM Notification
 	background: url("images/pm_read.gif");
 	background-repeat: no-repeat;
 	background-position: right;
-	padding: 10px 35px 10px 0;
+	padding: 10px 0;
+	padding-right: 35px;
 	margin: -4px 0;
 }
 
@@ -60,15 +61,15 @@ Background images for Animated PM Notification
 }
 
 @media only screen and (max-width: 350px), only screen and (max-device-width: 350px) {
-   .pm-have {
-      display: none;
-   }
-   .pm-read {
-      background: url("");
-      padding-right: 0;
-   }
-   .pm-mail {
-      background: url("");
-      padding: 0;
-   }
+	.pm-have {
+		display: none;
+	}
+	.pm-read {
+		background: url("");
+		padding-right: 0;
+	}
+	.pm-mail {
+		background: url("");
+		padding: 0;
+	}
 }
