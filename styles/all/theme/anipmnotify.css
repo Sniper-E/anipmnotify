@@ -36,6 +36,12 @@ Background images for Animated PM Notification
 	margin-bottom: -6px;
 }
 
+.rtl .pm-clapping {
+	float: right;
+	background-position: right;
+	padding-right: 40px;
+}
+
 .pm-mail {
 	background: url("images/pm_mail.gif");
 	background-repeat: no-repeat;
@@ -50,6 +56,12 @@ Background images for Animated PM Notification
 	padding: 10px 0;
 	padding-right: 35px;
 	margin: -4px 0;
+}
+
+.rtl .pm-read {
+	float: left;
+	background-position: left;
+	padding-left: 35px;
 }
 
 .pm-new {
@@ -67,6 +79,9 @@ Background images for Animated PM Notification
 	.pm-read {
 		background: url("");
 		padding-right: 0;
+	}
+	,rtl .pm-read {
+		padding-left: 0;
 	}
 	.pm-mail {
 		background: url("");
