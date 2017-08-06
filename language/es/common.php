@@ -3,8 +3,6 @@
 * @package Animated PM Notification
 * @copyright (c) 2015 Sniper_E - http://sniper-e.com
 * @license http://opensource.org/licenses/gpl-license.php GNU Public License
-*
-* Translated By : Bassel Taha Alhitary - www.alhitary.net
 */
 
 /**
@@ -14,6 +12,7 @@ if (!defined('IN_PHPBB'))
 {
 	exit;
 }
+
 if (empty($lang) || !is_array($lang))
 {
 	$lang = array();
@@ -38,14 +37,8 @@ if (empty($lang) || !is_array($lang))
 $lang = array_merge(
 	$lang, array(
 //
-// Arabic language file
+// English language file
 //
-		'PM_YOU_HAVE'		=> 'لديك',
-		'PM_READ'			=> 'اقرأ رسالتك الخاصة',
-		'PM_READ_S'			=> 'اقرأ رسائلك الخاصة',
-		'PM_NEW'			=> 'رسالة جديدة',
-		'PM_NEW_S'			=> 'رسائل جديدة',
-		'PM_UNREAD'			=> 'رسالة غير مقروءة',
-		'PM_UNREAD_S'		=> 'رسائل غير مقروءة',
+		'PM_READ'			=> 'Leer mensajes',
 	)
 );

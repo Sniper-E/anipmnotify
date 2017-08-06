@@ -39,6 +39,6 @@ $lang = array_merge(
 //
 // English language file
 //
-		'PM_READ'			=> 'Go to Inbox',
+		'PM_READ'			=> 'Ler mensagens',
 	)
 );

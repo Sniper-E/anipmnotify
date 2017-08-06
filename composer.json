@@ -3,8 +3,8 @@
 	"type": "phpbb-extension",
 	"description": "This extension will add a animated notification in the navbar when you receive a new PM.",
 	"homepage": "http://sniper-e.com",
-	"version": "1.0.1",
-	"time": "2015-10-18",
+	"version": "1.0.4",
+	"time": "2015-09-28",
 	"keywords": ["phpbb", "extension", "animated", "smilie", "pm", "notification"],
 	"license": "GPL-2.0",
 	"authors": [
@@ -21,7 +21,7 @@
 	"extra": {
 		"display-name": "Animated PM Notification",
 		"soft-require": {
-			"phpbb/phpbb": "3.1.*"
+			"phpbb/phpbb": ">=3.1.9"
 		},
 		"version-check": {
 			"host": "sniper-e.com",

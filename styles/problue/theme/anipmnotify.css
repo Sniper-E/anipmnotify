@@ -1,0 +1,14 @@
+/* Animated PM Notification */
+.pm-notify { text-align: center;font-size: 1.1em;font-weight: bold; }
+.pm-message { vertical-align: middle;padding-top: 10px;white-space: nowrap; }
+.pm-clapping { float: left;background: url("images/pm_clapping.gif");background-repeat: no-repeat;background-position: left;height: 24px;padding-left: 40px;padding-top: 6px;margin-bottom: -6px; }
+.pm-mail { background: url("images/pm_mail.gif");background-repeat: no-repeat;padding: 15px 24px 20px; }
+.notify-this { background: url("images/notify_this.gif");background-repeat: no-repeat;padding: 4px 15px 10px;margin-left: 6px; }
+.pm-read { float: right;background: url("images/pm_read.gif");background-repeat: no-repeat;background-position: right;padding: 10px 35px 10px 0;margin: -4px 0; }
+.unreadpm { vertical-align: bottom;float: none;color: #FFFFFF !important; }
+a:hover .unreadpm { background-color: #D31141; }
+.newpm, .newnotify { vertical-align: bottom;float: none;color: #FFFFFF !important; }
+.seperator { background: #98ABB3;height: 1px;margin: 6px 0 10px; }
+.notification-block img { width: 30px;height: 30px;margin-bottom: 2px; }
+#page-header .ani-navbar { display: block;margin-bottom: 4px; }
+@media (max-width: 430px) { .pm-read, .pm-clapping, .pm-mail, .pm-have { display:none; } }

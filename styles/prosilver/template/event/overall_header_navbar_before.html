@@ -1,0 +1,62 @@
+<!-- IF S_DISPLAY_PM and (S_USER_NEW_PRIVMSG or S_USER_UNREAD_PRIVMSG or NOTIFICATIONS_COUNT) -->
+	<div class="navbar ani-navbar">
+
+		<!-- IF S_USER_NEW_PRIVMSG or S_USER_UNREAD_PRIVMSG -->
+		<div class="inner pm-notify">
+			<span class="pm-read"><a href="{U_PRIVATEMSGS}">{L_PM_READ}</a></span>
+			<span class="pm-clapping">{CURRENT_USERNAME_SIMPLE}</span>
+			<span class="pm-message">
+			<!-- IF S_USER_UNREAD_PRIVMSG > S_USER_NEW_PRIVMSG and S_USER_NEW_PRIVMSG != 0 -->
+				{L_NEW_MESSAGES} <a href="{U_PRIVATEMSGS}"><strong class="badge badge-new newpm">{S_USER_NEW_PRIVMSG}</strong></a> <span class="pm-mail"></span> {L_UNREAD_MESSAGES} <a href="{U_PRIVATEMSGS}"><strong class="badge unreadpm">{PRIVATE_MESSAGE_COUNT}</strong></a>
+			<!-- ELSE -->
+				<span class="pm-mail"></span>
+				<!-- IF S_USER_NEW_PRIVMSG -->{L_NEW_MESSAGES} <a href="{U_PRIVATEMSGS}"><strong class="badge badge-new newpm">{S_USER_NEW_PRIVMSG}</strong></a>
+				<!-- ELSE -->{L_UNREAD_MESSAGES} <a href="{U_PRIVATEMSGS}"><strong class="badge unreadpm">{PRIVATE_MESSAGE_COUNT}</strong></a>
+				<!-- ENDIF -->
+			<!-- ENDIF -->
+			</span>
+		</div>
+		<!-- ENDIF -->
+
+		<!-- IF NOTIFICATIONS_COUNT and (S_USER_NEW_PRIVMSG or S_USER_UNREAD_PRIVMSG) -->
+		<div class="seperator"></div>
+		<!-- ENDIF -->
+
+		<!-- IF NOTIFICATIONS_COUNT -->
+		<div class="contents">
+			<h4><span class="notify-this"></span>{L_NOTIFICATIONS} <strong class="badge badge-new newnotify">{NOTIFICATIONS_COUNT}</strong>
+			<span class="header_settings" style="float: right">
+				<a href="{U_NOTIFICATION_SETTINGS}">{L_SETTINGS}</a>
+				<!-- IF NOTIFICATIONS_COUNT -->
+					<span id="mark_all_notifications"> &bull; <a href="{U_MARK_ALL_NOTIFICATIONS}" data-ajax="notification.mark_all_read">{L_MARK_ALL_READ}</a></span>
+				<!-- ENDIF -->
+			</span></h4>
+			<br />
+			<ul class="nav-breadcrumbs linklist navlinks">
+			<!-- BEGIN notifications -->
+				<!-- IF notifications.UNREAD -->
+				<li class=" row bg2<!-- IF not notifications.URL --> no-url<!-- ENDIF -->">
+					<!-- IF notifications.URL -->
+						<a class="notification-block" href="<!-- IF notifications.UNREAD -->{notifications.U_MARK_READ}" data-real-url="{notifications.URL}<!-- ELSE -->{notifications.URL}<!-- ENDIF -->" title="{notifications.TIME}">
+					<!-- ENDIF -->
+						<!-- IF notifications.AVATAR -->{notifications.AVATAR}<!-- ELSE --><img src="{T_THEME_PATH}/images/no_avatar.gif" alt="" /><!-- ENDIF -->
+							<span class="notification-title">{notifications.FORMATTED_TITLE}</span>
+							<!-- IF notifications.REFERENCE --><span class="notification-reference">{notifications.REFERENCE}</span><!-- ENDIF -->
+							<!-- IF notifications.FORUM --><span class="notification-forum">{notifications.FORUM}</span><!-- ENDIF -->
+							<!-- IF notifications.REASON --><span class="notification-reason">{notifications.REASON}</span><!-- ENDIF -->
+					<!-- IF notifications.URL --></a><!-- ENDIF -->
+					<!-- IF notifications.UNREAD -->
+						<a href="{notifications.U_MARK_READ}" class="mark_read icon-mark rightside" data-ajax="notification.mark_read" title="{L_MARK_READ}">
+							 <i class="icon fa-check-circle icon-xl fa-fw" aria-hidden="true"></i><span class="sr-only">{L_MARK_READ}</span>
+						</a>
+					<!-- ENDIF -->
+				</li>
+				<!-- ENDIF -->
+			<!-- END notifications -->
+			</ul>
+			<a href="{U_VIEW_ALL_NOTIFICATIONS}"><span>{L_SEE_ALL}</span></a>
+		</div>
+		<!-- ENDIF -->
+
+	</div>
+<!-- ENDIF -->
